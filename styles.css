@@ -1,166 +1,176 @@
+/* General styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    text-align: center;
 }
 
 header {
+    background-color: #162447;
+    padding: 20px;
     text-align: center;
-    padding: 20px;
 }
 
-h1 {
-    font-size: 2.5em;
+.header-container h1 {
+    color: #e94560;
     margin: 0;
-    color: #61dafb; /* Primary color */
+    font-size: 36px;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin: 0;
-}
-
-.floating-tabs {
+.floating-buttons {
+    position: absolute;
+    top: 20px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10; /* Ensure buttons are above other content */
 }
 
-.floating-tab {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    width: 90%; /* Centering the tabs */
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.floating-tab.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-section {
-    margin: 20px 0;
-}
-
-h3 {
-    font-size: 1.3em;
-    color: #ffa500; /* Secondary color */
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
-}
-
-a {
-    color: #61dafb;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project {
-    background-color: #2b2b2b;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    width: calc(30% - 20px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.project h3 {
-    margin-top: 0;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: center; /* Centering the skills */
-    flex-wrap: wrap;
-}
-
-.skill-tab {
-    width: 30%;
-    margin: 10px;
-    min-width: 200px; /* Ensures minimum width on small screens */
-}
-
-.github-floating-btn, .linkedin-floating-btn {
-    position: fixed;
-    padding: 10px 15px;
-    border-radius: 5px;
+.floating-button {
+    background-color: #1f4068;
     color: #ffffff;
-    background-color: #333;
+    padding: 10px 15px;
     text-decoration: none;
-    z-index: 1000;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.github-floating-btn {
-    top: 20px;
-    left: 20px;
+.floating-button:hover {
+    background-color: #e94560;
 }
 
-.linkedin-floating-btn {
-    top: 20px;
-    right: 20px;
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    gap: 15px;
+    padding: 0;
+    margin: 10px 0 0;
 }
 
-.floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #61dafb;
-    color: #121212;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 15px;
 }
 
-.floating-btn:hover {
-    background-color: #4dc4e0;
+.nav-links li a:hover {
+    background-color: #e94560;
+    border-radius: 5px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e1e1e;
+/* Tab Section styles */
+.tab-section {
     position: relative;
+    max-width: 800px;
+    margin: 80px auto; /* Center the section */
+    padding: 60px 20px;
+    background-color: #162447;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Tab Title floating above the tab */
+.tab-title {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e94560;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-    .skill-tab {
-        width: 100%;
-    }
+/* Content within each tab */
+.tab-content {
+    margin-top: 40px; /* To account for the floating title */
+}
 
-    .project {
-        width: 100%;
-    }
+.tab-content h2 {
+    font-size: 28px;
+    color: #e94560;
+    margin-bottom: 20px;
+}
+
+.tab-content p,
+.tab-content ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Project grid */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #1f4068;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-item h3 {
+    font-size: 24px;
+    color: #e94560;
+}
+
+.project-item a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #1f4068;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.project-item a:hover {
+    background-color: #e94560;
+}
+
+/* Skills section */
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Footer styling */
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: #162447;
+}
+
+footer a {
+    color: #e94560;
+    text-decoration: none;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-links a:hover {
+    color: #e94560;
 }

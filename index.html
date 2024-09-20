@@ -3,101 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="description" content="Portfolio of John Njoroge Kinyua, a computer science student with expertise in Python, C++, Java, and AI.">
+    <title>John Njoroge Kinyua - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>JOHN NJOROGE KINYUA</h1>
-        <h2>Welcome to My Digital Space!</h2>
+        <div class="header-container">
+            <h1>JOHN NJOROGE KINYUA</h1>
+            <div class="floating-buttons">
+                <a href="https://github.com" class="floating-button gitHub" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/feed/" class="floating-button linkedIn" target="_blank">LinkedIn</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <a href="https://github.com/dashboard" class="github-floating-btn" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/feed/" class="linkedin-floating-btn" target="_blank">Follow me on LinkedIn</a>
-
-    <div class="floating-tabs">
-        <div class="floating-tab" id="about">
-            <h2>About Me</h2>
-            <p>I'm a passionate computer science student, skilled in a wide array of programming languages including Python, C, C++, Java, HTML, CSS, and PHP. My experience spans across software development, data structures, algorithms, and core areas like computer architecture and operating systems. Driven by curiosity and a love for problem-solving, I specialize in web development, artificial intelligence, database management, and software testing. With strong analytical foundations in discrete mathematics and linear algebra, I excel in designing, analyzing, and optimizing systems. Beyond technical skills, I’m a strong communicator, critical thinker, and team player, equipped to tackle interdisciplinary challenges. Whether you're here to collaborate, explore my work, or connect, you're in the right place. Let’s build something great together!</p>
-        </div>
-
-        <div class="floating-tab" id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>AI Summarizer</h3>
-                <p>Developed and deployed an AI summarization tool utilizing ReactJs and Redux, condensing lengthy articles into concise summaries, resulting in a 40% reduction in reading time for users.</p>
+    <main>
+        <!-- About Me Tab -->
+        <section id="about" class="tab-section">
+            <div class="tab-title">About Me</div>
+            <div class="tab-content">
+                <h2>Welcome to my digital space!</h2>
+                <p>I'm a passionate computer science student, skilled in a wide array of programming languages including Python, C, C++, Java, HTML, CSS, and PHP. My experience spans across software development, data structures, algorithms, and core areas like computer architecture and operating systems.</p>
+            <p>Driven by curiosity and a love for problem-solving, I specialize in web development, artificial intelligence, database management, and software testing. With strong analytical foundations in discrete mathematics and linear algebra, I excel in designing, analyzing, and optimizing systems.</p>
+            <p>Beyond technical skills, I’m a strong communicator, critical thinker, and team player, equipped to tackle interdisciplinary challenges. Whether you're here to collaborate, explore my work, or connect, you're in the right place. Let’s build something great together!</p>
             </div>
-        </div>
+        </section>
 
-        <div class="floating-tab" id="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-tab" id="programming-skills">
-                    <h3>Programming Skills</h3>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>TypeScript</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>C/C++</li>
-                        <li>PHP</li>
-                    </ul>
-                </div>
-
-                <div class="skill-tab" id="frameworks">
-                    <h3>Frameworks</h3>
-                    <ul>
-                        <li>React JS</li>
-                        <li>Next JS</li>
-                        <li>Tailwind CSS</li>
-                        <li>Redux Tool Kit</li>
-                        <li>Prisma</li>
-                        <li>MongoDB</li>
-                        <li>Redux</li>
-                        <li>Spring Boot</li>
-                    </ul>
-                </div>
-
-                <div class="skill-tab" id="software-skills">
-                    <h3>Software Skills</h3>
-                    <ul>
-                        <li>Git/GitHub</li>
-                        <li>Spline</li>
-                        <li>Figma</li>
-                        <li>MS SQL Server</li>
-                        <li>Oracle</li>
-                        <li>MySQL</li>
-                    </ul>
+        <!-- Projects Tab -->
+        <section id="projects" class="tab-section">
+            <div class="tab-title">Projects</div>
+            <div class="tab-content">
+                <h2>Projects</h2>
+                <div class="project-gallery">
+                    <div class="project-item">
+                        <h3>AI Summarizer</h3>
+                        <p>Developed an AI tool using ReactJS and Redux to summarize articles, reducing reading time by 40%.</p>
+                        <a href="https://github.com/your-github-repo" target="_blank">GitHub</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="floating-tab" id="services">
-            <h2>Services</h2>
-            <p>I offer freelance and consulting services in web development, AI, and more. Let's discuss how I can help you!</p>
-        </div>
+        <!-- Skills Tab -->
+        <section id="skills" class="tab-section">
+            <div class="tab-title">Skills</div>
+            <div class="tab-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming: Python, Java, C, C++, HTML, CSS, PHP</li>
+                    <li>Web Development: ReactJS, NextJS, Tailwind CSS, Redux</li>
+                    <li>AI & Data Science</li>
+                    <li>Database Management: MongoDB, MySQL</li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="floating-tab" id="blog">
-            <h2>Latest Technology Blogs</h2>
-            <ul>
-                <li><a href="https://www.pluralsight.com/blog/technology" target="_blank">Pluralsight Technology Blog</a></li>
-            </ul>
-        </div>
+        <!-- Services Tab -->
+        <section id="services" class="tab-section">
+            <div class="tab-title">Services</div>
+            <div class="tab-content">
+                <h2>Services</h2>
+                <p>I offer consulting in web development, AI solutions, and database design. Contact me for more information!</p>
+            </div>
+        </section>
 
-        <div class="floating-tab" id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:kinyuajohnnjoroge@gmail.com">kinyuajohnnjoroge@gmail.com</a></p>
-        </div>
-    </div>
+        <!-- Contact Tab -->
+        <section id="contact" class="tab-section">
+            <div class="tab-title">Contact</div>
+            <div class="tab-content">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:kinyuajohnnjoroge@gmail.com">kinyuajohnnjoroge@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-
-    <button class="floating-btn" onclick="alert('Contact me!')">📧</button>
     <script src="script.js"></script>
 </body>
 </html>
