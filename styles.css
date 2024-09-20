@@ -21,11 +21,11 @@ header {
 }
 
 .floating-buttons {
-    position: absolute;
-    top: 20px;
-    width: 100%;
+    position: fixed; /* Change to fixed positioning */
+    bottom: 20px; /* Distance from the bottom */
+    width: calc(100% - 40px); /* Full width minus padding */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space buttons to left and right */
     padding: 0 20px;
     z-index: 10; /* Ensure buttons are above other content */
 }
@@ -42,6 +42,7 @@ header {
 .floating-button:hover {
     background-color: #e94560;
 }
+
 
 .nav-links {
     list-style: none;
